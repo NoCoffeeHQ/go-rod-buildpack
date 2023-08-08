@@ -15,6 +15,7 @@ echo "-----> Installing Headless browser"
 
 export
 
+ls .
 ls $BUILD_DIR
 ls $CACHE_DIR
 ls $ENV_DIR
