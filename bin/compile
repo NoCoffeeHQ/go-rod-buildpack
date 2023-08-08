@@ -33,9 +33,16 @@ ls -la $CACHE_DIR/go1.20/go/bin
 echo "---- BUILD_DIR ($CACHE_DIR)/.scalingo/go ---"
 ls -la $BUILD_DIR/.scalingo/go
 
-cd $BUILD_DIR/bin
-chmod 755 ./utils
-./utils
+$BUILD_DIR/.scalingo/go/bin/go version
+
+cd ./get_browser
+$BUILD_DIR/.scalingo/go/bin/go mod download
+$BUILD_DIR/.scalingo/go/bin/go run main.go
+
+# 💪 This works!!!!
+#cd $BUILD_DIR/bin
+#chmod 755 ./utils
+#./utils
 
 go version
 
