@@ -6,11 +6,20 @@ This is a very custom buildpack for installing Chromium required by the go-rod m
 
 Follow the 3 steps:
 
-1. Add the buildpack in your `.buildpacks` file in your main Go project
+1. Add the buildpacks in your `.buildpacks` file in your main Go project
 
 ```
+https://github.com/Scalingo/apt-buildpack
 https://github.com/Scalingo/go-buildpack.git
 https://github.com/nocoffeehq/go-rod-buildpack.git
+```
+
+2. Create the Aptfile in your main Go project
+
+```
+libnss3 libxss1 libasound2 libxtst6 libgtk-3-0 libgbm1 ca-certificates fonts-liberation fonts-noto-color-emoji fonts-noto-cjk timezone tzdata process reaper dumb-init xvfb
+
+https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 
 2. Add the following file in your main Go project
