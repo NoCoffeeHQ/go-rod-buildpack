@@ -13,14 +13,17 @@ ENV_DIR=$3
 
 echo "-----> Installing Headless browser"
 
+echo "---- ENV variables ---"
 export
 
-ls .
-ls $BUILD_DIR
-ls $CACHE_DIR
-ls $ENV_DIR
+echo "---- CURRENT_DIR ---"
+ls -la .
+echo "---- BUILD_DIR ($BUILD_DIR) ---"
+ls -la $BUILD_DIR
+echo "---- CACHE_DIR ($CACHE_DIR) ---"
+ls -la $CACHE_DIR
 
-go run $BUILD_DIR/utils/get_browser.go
+./go1.20 run $BUILD_DIR/utils/get_browser.go
 
 echo "-----> Installing packages"
 
