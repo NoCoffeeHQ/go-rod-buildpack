@@ -28,9 +28,18 @@ echo "-"
 ls -la $CACHE_DIR/go1.20
 
 echo "---- CACHE_DIR ($CACHE_DIR)/go1.20/go ---"
-ls $CACHE_DIR/go1.20/go
+ls -la $CACHE_DIR/go1.20/go/bin
 
-.$BUILD_DIR/bin/utils
+echo "---- BUILD_DIR ($CACHE_DIR)/.scalingo/go ---"
+ls -la $BUILD_DIR/.scalingo/go
+
+cd $BUILD_DIR/bin
+chmod 755 ./utils
+./utils
+
+go version
+
+# .$BUILD_DIR/bin/utils
 
 # $CACHE_DIR/bin/go run $BUILD_DIR/utils/get_browser.go
 
