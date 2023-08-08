@@ -15,48 +15,11 @@ GET_BROWSER_BIN=$BUILD_DIR/bin/$GET_BROWSER_BIN_NAME
 
 echo "-----> Installing Headless browser"
 
-echo "---- ENV variables ---"
-export
-
-echo "---- CURRENT_DIR ---"
-ls -la .
-echo "---- BUILD_DIR ($BUILD_DIR) ---"
-ls -la $BUILD_DIR
-echo "---- BUILD_DIR/bin ($BUILD_DIR)/bin ---"
-ls -la $BUILD_DIR/bin
-echo "---- CACHE_DIR ($CACHE_DIR) ---"
-ls -la $CACHE_DIR
-echo "-"
-ls -la $CACHE_DIR/go1.20
-
-echo "---- CACHE_DIR ($CACHE_DIR)/go1.20/go ---"
-ls -la $CACHE_DIR/go1.20/go/bin
-
-echo "---- BUILD_DIR ($CACHE_DIR)/.scalingo/go ---"
-ls -la $BUILD_DIR/.scalingo/go
-
-# $BUILD_DIR/.scalingo/go/bin/go version
-
-# cd ./get_browser
-# $BUILD_DIR/.scalingo/go/bin/go mod download
-# $BUILD_DIR/.scalingo/go/bin/go run main.go
-
 if [ -e $GET_BROWSER_BIN ]; then
     echo "--- RUNNING BINARY: $GET_BROWSER_BIN ----"
     chmod 755 $GET_BROWSER_BIN
     $GET_BROWSER_BIN
 fi
-
-# 💪 This works!!!!
-#cd $BUILD_DIR/bin
-#chmod 755 ./utils
-#./utils
-
-go version
-
-# .$BUILD_DIR/bin/utils
-
-# $CACHE_DIR/bin/go run $BUILD_DIR/utils/get_browser.go
 
 echo "-----> Installing packages"
 
