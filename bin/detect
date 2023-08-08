@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "rod-buildpack"
+exit 0

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+set -e
+
+if [ -n "$BUILDPACK_DEBUG" ]; then
+    set -x
+fi
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+echo "-----> Installing Headless browser"
+
+go run $BUILD_DIR/utils/get_browser.go
+
+echo "-----> Installing packages"
+
+apt-get install --no-install-recommends -y \
+    # chromium dependencies
+    libnss3 \
+    libxss1 \
+    libasound2 \
+    libxtst6 \
+    libgtk-3-0 \
+    libgbm1 \
+    ca-certificates \
+    # fonts
+    fonts-liberation fonts-noto-color-emoji fonts-noto-cjk \
+    # timezone
+    tzdata \
+    # process reaper
+    dumb-init \
+    # headful mode support, for example: $ xvfb-run chromium-browser --remote-debugging-port=9222
+    xvfb \
+    > /dev/null
+
