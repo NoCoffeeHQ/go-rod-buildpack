@@ -1,4 +1,4 @@
-# go-rod Buildpack
+# go-rod buildpack
 
 This is a buildpack for installing Chromium required by the go-rod module. This prevents the download of the browser binary during the lifetime of the application.
 

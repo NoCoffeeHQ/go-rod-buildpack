@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "rod-buildpack"
+echo "go-rod-buildpack"
 exit 0

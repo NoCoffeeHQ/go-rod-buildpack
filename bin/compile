@@ -13,6 +13,12 @@ ENV_DIR=$3
 
 echo "-----> Installing Headless browser"
 
+export
+
+ls $BUILD_DIR
+ls $CACHE_DIR
+ls $ENV_DIR
+
 go run $BUILD_DIR/utils/get_browser.go
 
 echo "-----> Installing packages"
