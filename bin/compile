@@ -27,7 +27,8 @@ ls -la $CACHE_DIR
 echo "-"
 ls -la $CACHE_DIR/go1.20
 
-$CACHE_DIR/go1.20/go
+echo "---- CACHE_DIR ($CACHE_DIR)/go1.20/go ---"
+ls $CACHE_DIR/go1.20/go
 
 .$BUILD_DIR/bin/utils
 
