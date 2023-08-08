@@ -16,7 +16,6 @@ GET_BROWSER_BIN=$BUILD_DIR/bin/$GET_BROWSER_BIN_NAME
 echo "-----> Installing Headless browser"
 
 if [ -e $GET_BROWSER_BIN ]; then
-    echo "--- RUNNING BINARY: $GET_BROWSER_BIN ----"
     chmod 755 $GET_BROWSER_BIN
     $GET_BROWSER_BIN
 fi
