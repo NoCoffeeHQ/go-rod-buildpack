@@ -22,8 +22,6 @@ echo "---- BUILD_DIR ($BUILD_DIR) ---"
 ls -la $BUILD_DIR
 echo "---- BUILD_DIR/bin ($BUILD_DIR)/bin ---"
 ls -la $BUILD_DIR/bin
-echo "---- BUILD_DIR ($BUILD_DIR)/target ---"
-ls -la $BUILD_DIR/target
 echo "---- CACHE_DIR ($CACHE_DIR) ---"
 ls -la $CACHE_DIR
 echo "-"
