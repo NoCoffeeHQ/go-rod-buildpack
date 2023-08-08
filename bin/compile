@@ -24,10 +24,14 @@ echo "---- BUILD_DIR/bin ($BUILD_DIR)/bin ---"
 ls -la $BUILD_DIR/bin
 echo "---- BUILD_DIR ($BUILD_DIR)/target ---"
 ls -la $BUILD_DIR/target
+echo "-"
+ls -la $BUILD_DIR/target/utils
 echo "---- CACHE_DIR ($CACHE_DIR) ---"
 ls -la $CACHE_DIR
+echo "-"
+ls -la $CACHE_DIR/go1.20
 
-$BUILD_DIR/bin/go run $BUILD_DIR/utils/get_browser.go
+$CACHE_DIR/bin/go run $BUILD_DIR/utils/get_browser.go
 
 echo "-----> Installing packages"
 
