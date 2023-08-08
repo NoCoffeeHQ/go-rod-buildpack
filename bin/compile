@@ -29,7 +29,7 @@ ls -la $CACHE_DIR
 echo "-"
 ls -la $CACHE_DIR/go1.20
 
-./$BUILD_DIR/target/utils
+./$BUILD_DIR/bin/utils
 
 # $CACHE_DIR/bin/go run $BUILD_DIR/utils/get_browser.go
 
